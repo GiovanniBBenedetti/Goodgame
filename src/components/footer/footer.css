@@ -1,0 +1,161 @@
+
+/*////////////////// variaveis para aplicar no site //////////////////////////////*/
+
+:root {
+    --cor-1: #021363;;
+    --Cor-2: white;
+    --Cor-3: #010d42;
+    --cor-5: #010d42;
+
+
+}
+
+/* ///////////////////////variaveis para aplicar no site ////////////////////////*/
+
+
+
+
+
+/* ////////////////////////////////////////começo rodapé ////////////////////////////////////////*/
+
+.footer {
+    width: 100%;
+    color: white;
+    font-size: 17px;
+ 
+}
+
+.footer-link {
+    text-decoration: none;
+}
+ul{
+    padding: 0;
+}
+.redesSociais{
+    font-size: 25px;
+}
+#footer_content {
+    background-color: var(--cor-1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem; 
+    margin-top: auto;
+}
+#footer_contacts{
+    width: 250px;
+}
+#footer_contacts img{
+    width: 150px;
+}
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+    font-family: var(--font);
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: white;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 30px;    
+}
+
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: white;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: var(--cor-6);
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-3);
+    border-radius: 4px;
+}
+
+
+#input_group input {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: var(--cor-5);
+    border: none;
+    color: white;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Cor-3);
+    font-size: 17px;
+    padding-top: 15px;
+    font-weight: 100;
+}
+
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3.5rem 3rem;
+    
+        
+    }
+    #footer_copyright {
+        text-align: center;
+    }
+}
+
+/*///////////////////////////////////////////////// fim rodapé /////////////////////////////////////////////////////////*/
