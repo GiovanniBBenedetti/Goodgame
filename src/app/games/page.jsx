@@ -11,10 +11,13 @@ export default function GamesPage() {
 
     const handlePrevious = () => {
         if (page > 1) setPage(page - 1)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const handleNext = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
         setPage(page + 1)
+       
     };
 
     useEffect(() => {
@@ -24,7 +27,7 @@ export default function GamesPage() {
             .then((data) => {
                 setGames(data.results)
                 setLoading(false)
-            });
+            });   
     }, [page]);
 
     return (
@@ -47,15 +50,15 @@ export default function GamesPage() {
         <div>
           <h5 className="card-title fw-bold">{game.name}</h5>
 
-          {/* Plataformas */}
+        
           <div className="d-flex flex-wrap mb-2">
-            {game.parent_platforms?.map((platformObj) => (
+            {game.parent_platforms?.map((plataforma) => (
               <span
-                key={platformObj.platform.id}
+                key={plataforma.platform.id}
                 className="badge bg-secondary me-2 mb-1"
                 style={{ fontSize: '0.75rem' }}
               >
-                {platformObj.platform.name}
+                {plataforma.platform.name}
               </span>
             ))}
           </div>
@@ -84,7 +87,7 @@ export default function GamesPage() {
                             Anterior
                         </button>
                         <span className="text-white">Página {page}</span>
-                        <button className="btn btn-primary" onClick={handleNext}>
+                        <button className="btn btn-primary"  onClick={handleNext}>
                             Próxima
                         </button>
                     </div>
